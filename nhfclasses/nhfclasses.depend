@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1556539020 source:c:\users\home\desktop\nhfclasses\main.cpp
+	<iostream>
+	"arveres.h"
+	<stdlib.h>
+	<time.h>
+	<string>
+
+1556545169 c:\users\home\desktop\nhfclasses\arveres.h
+	"arveres.h"
+	<iostream>
+	<string>
+
+1556538683 source:c:\users\home\desktop\nhfclasses\item.cpp
+	"arveres.h"
+
+1556543175 source:c:\users\home\desktop\nhfclasses\customer.cpp
+	"arveres.h"
+	<stdlib.h>
+	<time.h>
+
+1556540984 source:c:\users\home\desktop\nhfclasses\arveres.cpp
+	"arveres.h"
+
+1556546032 source:c:\users\home\desktop\nhfclasses\auction.cpp
+	"arveres.h"
+
