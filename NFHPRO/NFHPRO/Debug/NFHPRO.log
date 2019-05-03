@@ -1,2 +1,9 @@
-﻿  auction.cpp
-  NFHPRO.vcxproj -> C:\Users\HOME\Desktop\NFHPRO\Debug\NFHPRO.exe
+﻿  arveres.cpp
+  auction.cpp
+  auctioneer.cpp
+  customer.cpp
+c:\users\home\desktop\nhf\nhfclasses\customer.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  item.cpp
+  main.cpp
+  Generating Code...
+  NFHPRO.vcxproj -> C:\Users\HOME\Desktop\NHF\NFHPRO\Debug\NFHPRO.exe

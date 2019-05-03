@@ -30,8 +30,17 @@
     <ClCompile Include="..\..\nhfclasses\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\nhfclasses\memtrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nhfclasses\auctioneer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\nhfclasses\memtrace.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\nhfclasses\arveres.h">
       <Filter>Source Files</Filter>
     </ClInclude>

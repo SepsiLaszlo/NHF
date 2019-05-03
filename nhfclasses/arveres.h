@@ -5,6 +5,8 @@
 #include"arveres.h"
 #include<iostream>
 #include<string>
+#include"memtrace.h"
+#define MEMTRACE
 
 using namespace std;
 enum SellingMetod
@@ -82,7 +84,6 @@ class Auction
 
 public:
     Auction();
-
     void AddCustomer(const Customer&c);
     void AddItemForSale(const Item &i);
     void Start();
@@ -90,22 +91,19 @@ public:
     Vektor<Item>getItemsForsale();
     Vektor<Item>getItemsSold();
     Vektor<Item>getItemsLeft();
-
-
-
 private:
-
-    void sellItem(Item item) ;
-    void EnglisAuction(Item item);
-    void DeutchAuction(Item item);
+   
+	void sellItem(Item item);
+	void EnglisAuction(Item item);
+	void DeutchAuction(Item item);
 	void BlindAuction(Item item);
-
-
-    void transferItemToCustomer(Item item, Customer &customer,double price);
-
-
-
+	void transferItemToCustomer(Item item, Customer &customer, double price);
 };
+
+
+
+
+
 ostream& operator <<(ostream & os, Item i);
 ostream& operator <<(ostream & os, Customer c);
 ostream& operator <<(ostream & os, SellingMetod s);

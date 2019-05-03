@@ -117,12 +117,15 @@
   <ItemGroup>
     <ClCompile Include="..\..\nhfclasses\arveres.cpp" />
     <ClCompile Include="..\..\nhfclasses\auction.cpp" />
+    <ClCompile Include="..\..\nhfclasses\auctioneer.cpp" />
     <ClCompile Include="..\..\nhfclasses\customer.cpp" />
     <ClCompile Include="..\..\nhfclasses\item.cpp" />
     <ClCompile Include="..\..\nhfclasses\main.cpp" />
+    <ClCompile Include="..\..\nhfclasses\memtrace.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\nhfclasses\arveres.h" />
+    <ClInclude Include="..\..\nhfclasses\memtrace.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

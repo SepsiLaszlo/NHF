@@ -4,6 +4,9 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>
 #include <string>
+#include "memtrace.h"
+
+#define MEMTRACE 
 using namespace std;
 
 Auction auction;
@@ -21,28 +24,40 @@ void PrintOptions() {
 
 }
 
-void AddItemPanel() {
+Item getItemFromConsole() {
+	cout << "Item:" << endl;
+	string name, description;
+	double price;
+	int method;
+	cin.ignore();
+	cout << "Name: ";
+	getline(cin, name);
 
-	string itemName,itemDescription;
-	double itemPrice;
-	SellingMetod itemSellingMethod;
+	cout << "Description: ";
+	getline(cin, description);
+	cout << "Price: ";
+	cin >> price;
+	cout << "Method num: ";
+	cin >> method;
 
-	cout << "Item name:"<<endl;
-	cin >> itemName;
+	return Item(name,price,description,SellingMetod(method));
+}
 
-	cout << "Item description:" << endl;
-	cin >> itemDescription;
+Customer getCustomerFromConsole() {
+	cout << "Customer:" << endl;
+	string name;
+	double balance;
+	
+	cin.ignore();
+	cout << "Name: ";
+	getline(cin, name);
 
-	cout << "Item price:" << endl;
-	cin >> itemPrice;
+	cout << "Balance: ";
+	cin >> balance;
 
-	cout << "Selling method(English=0, Dutch=1, Blind=2):" << endl;
-	int methodNumber;
-	cin >> methodNumber;
-	itemSellingMethod = SellingMetod(methodNumber);
+	Customer customer(name,balance);
 
-
-	auction.AddItemForSale(Item(itemName,itemPrice, itemDescription, itemSellingMethod));
+	return customer;
 
 }
 
@@ -50,22 +65,25 @@ void UserInteractionHandler() {
 
 	PrintOptions();
 
-	int selectedOptionNum;
+	char selectedOptionNum;
 
-	while ((cin>>selectedOptionNum),selectedOptionNum!=4)
+	while ((cin>>selectedOptionNum),selectedOptionNum!='4')
 	{
 
 		switch (selectedOptionNum)
 		{
-		case 1:
-			AddItemPanel();
+		case '1':
+		 auction.AddItemForSale(getItemFromConsole());
 			break;
-		case 3:
+		case '2':
+			auction.AddCustomer(getCustomerFromConsole());
+		case '3':
 			auction.Start();
 			break;
 		default:
 			break;
 		}
+		
 
 	}
 
@@ -101,14 +119,14 @@ void Test() {
 
 
 
-
-
-
 int main() {
 
+	
 
 
 	Test();
     cout<<auction;
+
+	
 	return 0;
 }
