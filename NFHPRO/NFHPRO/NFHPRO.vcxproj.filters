@@ -21,9 +21,6 @@
     <ClCompile Include="..\..\nhfclasses\auction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\nhfclasses\customer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\nhfclasses\item.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,7 +30,7 @@
     <ClCompile Include="..\..\nhfclasses\memtrace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\nhfclasses\auctioneer.cpp">
+    <ClCompile Include="..\..\nhfclasses\customer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -42,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\nhfclasses\arveres.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nhfclasses\gtest_lite.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,9 +4,10 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>
 #include <string>
-#include "memtrace.h"
 
-#define MEMTRACE 
+#include "gtest_lite.h"
+
+
 using namespace std;
 
 Auction auction;
@@ -18,7 +19,10 @@ void PrintOptions() {
 		<< "1.Add Item" << endl
 		<< "2.Add Customer" << endl
 		<< "3.Start Auction"<<endl
-		<<"4.Exit"<<endl;
+		<< "4.Print Auction" << endl
+		<<"5.Delete Auction"<<endl
+		<<"6.Initilaize Auction"<<endl
+		<<"5.Exit"<<endl;
 
 
 
@@ -28,7 +32,7 @@ Item getItemFromConsole() {
 	cout << "Item:" << endl;
 	string name, description;
 	double price;
-	int method;
+	int methodnum;
 	cin.ignore();
 	cout << "Name: ";
 	getline(cin, name);
@@ -38,9 +42,18 @@ Item getItemFromConsole() {
 	cout << "Price: ";
 	cin >> price;
 	cout << "Method num: ";
-	cin >> method;
+	cin >> methodnum;
+	
+	Item item(name, price, description, SellingMetod(methodnum));
+	TEST(Aukcio, TargyFelvetelEllenorzes)
+		EXPECT_EQ(item.getName(), name) << "A függvény hibás eredményt adott" << std::endl;
+		EXPECT_EQ(item.getDescription(), description) << "A függvény hibás eredményt adott" << std::endl;
+		EXPECT_EQ(item.getPrice(), price) << "A függvény hibás eredményt adott" << std::endl;
+		EXPECT_EQ(item.getSellingMethod(),SellingMetod(methodnum)) << "A függvény hibás eredményt adott" << std::endl;
 
-	return Item(name,price,description,SellingMetod(method));
+	END
+	
+	return item;
 }
 
 Customer getCustomerFromConsole() {
@@ -56,8 +69,30 @@ Customer getCustomerFromConsole() {
 	cin >> balance;
 
 	Customer customer(name,balance);
+	TEST(Aukcio, VasarloLetrehozasEllenorzes)
+		EXPECT_EQ(customer.getName(),name) << "A függvény hibás eredményt adott" << std::endl;
+		EXPECT_EQ(customer.getBalance(), balance) << "A függvény hibás eredményt adott" << std::endl;
+	END
 
 	return customer;
+
+}
+
+void initializeTestAuction() {
+	Customer c1("Customer Cecil", 5000);
+	Customer c2("Generic Geza", 10000.0);
+	Customer c3("Random Robert", 20000.0);
+	Customer c4("Sample Sam", 30000.0);
+
+	auction.AddItemForSale(Item("alma", 100.0, "Egeszseges", English));
+	auction.AddItemForSale(Item("szekreny", 2000.0, "Butor", Blind));
+	auction.AddItemForSale(Item("mogyorovaj", 155.0, "Finom", Dutch));
+
+	auction.AddCustomer(c1);
+	auction.AddCustomer(c2);
+	auction.AddCustomer(c3);
+	auction.AddCustomer(c4);
+
 
 }
 
@@ -67,19 +102,34 @@ void UserInteractionHandler() {
 
 	char selectedOptionNum;
 
-	while ((cin>>selectedOptionNum),selectedOptionNum!='4')
+	while ((cin>>selectedOptionNum),selectedOptionNum!='7')
 	{
 
 		switch (selectedOptionNum)
 		{
 		case '1':
 		 auction.AddItemForSale(getItemFromConsole());
+		
 			break;
 		case '2':
 			auction.AddCustomer(getCustomerFromConsole());
 		case '3':
 			auction.Start();
+			TEST(Aukcio,TargyakSzamanakEllenorzese)
+				EXPECT_EQ(auction.getItemsSold().size() + auction.getItemsLeft().size(), auction.getItemsForsale().size()) << "A függvény hibás eredményt adott" << std::endl;
+			END
 			break;
+		case '4':
+			cout << auction;
+			break;
+		case '5':
+			auction.~Auction();
+			break;
+		case '6':
+			auction.~Auction();
+			initializeTestAuction();
+			break;
+
 		default:
 			break;
 		}
@@ -91,41 +141,25 @@ void UserInteractionHandler() {
 
 
 }
-
 void Test() {
 
-	Customer c1("Customer Cecil", 20000.0);
-	Customer c2("Generic Geza", 10000.0);
-	Customer c3("Random Robert", 20000.0);
-	Customer c4("Burnout Bela", 20000.0);
+	 Auction a();
 
-	 auction = Auction();
-
-	auction.AddItemForSale(Item("alma", 100.0, "Egeszseges", English));
-	auction.AddItemForSale(Item("szekreny", 2000.0, "Butor", Blind));
-	auction.AddItemForSale(Item("mogyorovaj", 155.0, "Finom", Dutch));
-
-	auction.AddCustomer(c1);
-	auction.AddCustomer(c2);
-	auction.AddCustomer(c3);
-    auction.AddCustomer(c4);
-
-
+	initializeTestAuction();
 	UserInteractionHandler();
 
 
-
 }
-
-
-
 int main() {
 
 	
 
 
 	Test();
-    cout<<auction;
+
+	char *x = new char[100];
+
+	//	auction.AddItemForSale(Item());
 
 	
 	return 0;

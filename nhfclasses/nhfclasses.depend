@@ -25,3 +25,39 @@
 1556546032 source:c:\users\home\desktop\nhfclasses\auction.cpp
 	"arveres.h"
 
+1556540984 source:c:\users\home\desktop\nhf\nhfclasses\arveres.cpp
+	"arveres.h"
+
+1556891891 c:\users\home\desktop\nhf\nhfclasses\arveres.h
+	"arveres.h"
+	<iostream>
+	<string>
+	"memtrace.h"
+
+1552567352 c:\users\home\desktop\nhf\nhfclasses\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1556543175 source:c:\users\home\desktop\nhf\nhfclasses\customer.cpp
+	"arveres.h"
+	<stdlib.h>
+	<time.h>
+
+1556538683 source:c:\users\home\desktop\nhf\nhfclasses\item.cpp
+	"arveres.h"
+
+1556890579 source:c:\users\home\desktop\nhf\nhfclasses\auction.cpp
+	"arveres.h"
+
+1556890888 source:c:\users\home\desktop\nhf\nhfclasses\auctioneer.cpp
+	"arveres.h"
+

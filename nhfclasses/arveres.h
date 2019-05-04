@@ -5,8 +5,7 @@
 #include"arveres.h"
 #include<iostream>
 #include<string>
-#include"memtrace.h"
-#define MEMTRACE
+
 
 using namespace std;
 enum SellingMetod
@@ -91,6 +90,7 @@ public:
     Vektor<Item>getItemsForsale();
     Vektor<Item>getItemsSold();
     Vektor<Item>getItemsLeft();
+	~Auction() {};
 private:
    
 	void sellItem(Item item);
