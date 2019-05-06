@@ -28,9 +28,14 @@ Vektor<Item>Auction::getItemsLeft()
 void  Auction::Start()
 {
 	if (itemsSold.size() > 0 || itemsLeft.size() > 0) { return; }
-	for (size_t i = 0; i < itemsForsale.size(); i++)
+	size_t itemForsaleNumber = itemsForsale.size();
+	for (size_t i = 0; i < itemForsaleNumber; i++)
 	{
-		sellItem(itemsForsale[i]);
+		/*sellItem(itemsForsale[i]);
+		itemsForsale.Delete(i);*/
+		sellItem(itemsForsale[itemsForsale.size()-1]);
+		itemsForsale.Pop();
+
 	}
 
 }

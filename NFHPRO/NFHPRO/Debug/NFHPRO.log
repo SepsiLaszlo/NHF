@@ -1,3 +1,3 @@
 ﻿  main.cpp
-c:\users\home\desktop\nhf\nhfclasses\main.cpp(146): warning C4930: 'Auction a(void)': prototyped function not called (was a variable definition intended?)
+c:\users\home\desktop\nhf\nhfclasses\main.cpp(149): warning C4930: 'Auction a(void)': prototyped function not called (was a variable definition intended?)
   NFHPRO.vcxproj -> C:\Users\HOME\Desktop\NHF\NFHPRO\Debug\NFHPRO.exe

@@ -6,6 +6,7 @@
 #include <string>
 
 #include "gtest_lite.h"
+#include "memtrace.h"
 
 
 using namespace std;
@@ -14,15 +15,14 @@ Auction auction;
 
 void PrintOptions() {
 
-	cout <<"Welcome to the Auction!"<<endl
-		<<"-Options-"<<endl
+	cout<<"-Options-"<<endl
 		<< "1.Add Item" << endl
 		<< "2.Add Customer" << endl
 		<< "3.Start Auction"<<endl
 		<< "4.Print Auction" << endl
-		<<"5.Delete Auction"<<endl
-		<<"6.Initilaize Auction"<<endl
-		<<"5.Exit"<<endl;
+		<<"5.Reset Auction"<<endl
+		<<"6.Seed Auction"<<endl
+		<<"7.Exit"<<endl;
 
 
 
@@ -78,7 +78,7 @@ Customer getCustomerFromConsole() {
 
 }
 
-void initializeTestAuction() {
+void SeedAuction() {
 	Customer c1("Customer Cecil", 5000);
 	Customer c2("Generic Geza", 10000.0);
 	Customer c3("Random Robert", 20000.0);
@@ -98,13 +98,13 @@ void initializeTestAuction() {
 
 void UserInteractionHandler() {
 
-	PrintOptions();
 
-	char selectedOptionNum;
+	char selectedOptionNum;	PrintOptions();
 
 	while ((cin>>selectedOptionNum),selectedOptionNum!='7')
 	{
 
+	
 		switch (selectedOptionNum)
 		{
 		case '1':
@@ -113,28 +113,30 @@ void UserInteractionHandler() {
 			break;
 		case '2':
 			auction.AddCustomer(getCustomerFromConsole());
+			break;
 		case '3':
-			auction.Start();
 			TEST(Aukcio,TargyakSzamanakEllenorzese)
-				EXPECT_EQ(auction.getItemsSold().size() + auction.getItemsLeft().size(), auction.getItemsForsale().size()) << "A függvény hibás eredményt adott" << std::endl;
+				size_t sizebefore = auction.getItemsForsale().size();
+			auction.Start();
+				EXPECT_EQ(auction.getItemsSold().size() + auction.getItemsLeft().size(),sizebefore) << "A fuggveny hibas eredmenyt adott" << std::endl;
 			END
 			break;
 		case '4':
 			cout << auction;
 			break;
 		case '5':
-			auction.~Auction();
+			auction = Auction();
 			break;
 		case '6':
-			auction.~Auction();
-			initializeTestAuction();
+			
+			SeedAuction();
 			break;
 
 		default:
 			break;
 		}
 		
-
+		PrintOptions();
 	}
 
 
@@ -143,9 +145,10 @@ void UserInteractionHandler() {
 }
 void Test() {
 
+	cout << "Welcome to the Auction!" << endl;
 	 Auction a();
 
-	initializeTestAuction();
+	SeedAuction();
 	UserInteractionHandler();
 
 
@@ -157,9 +160,6 @@ int main() {
 
 	Test();
 
-	char *x = new char[100];
-
-	//	auction.AddItemForSale(Item());
 
 	
 	return 0;

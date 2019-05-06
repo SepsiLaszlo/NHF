@@ -6,7 +6,7 @@
 #include<iostream>
 #include<string>
 
-
+#include "memtrace.h"
 using namespace std;
 enum SellingMetod
 {
