@@ -1,0 +1,143 @@
+\hypertarget{class_vektor}{}\section{Vektor$<$ T $>$ Class Template Reference}
+\label{class_vektor}\index{Vektor$<$ T $>$@{Vektor$<$ T $>$}}
+
+
+Egy template osztály megadható tipusú elemek tárolására, vektorban, listafunkciókkal.  
+
+
+
+
+{\ttfamily \#include $<$arveres.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vektor_ab96639d4c753c3a8282fa686cc060759}{Vektor}} (size\+\_\+t meret=0)
+\begin{DoxyCompactList}\small\item\em Létrehoz egy tárolót a megadott mérettel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vektor_a596e5a76d30f84aee074fa2684f9b450}{Vektor}} (const \mbox{\hyperlink{class_vektor}{Vektor}} \&v)
+\begin{DoxyCompactList}\small\item\em Másolókonstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vektor}{Vektor}} \& \mbox{\hyperlink{class_vektor_a55c33104d58a98db8af2bc0c48020383}{operator=}} (const \mbox{\hyperlink{class_vektor}{Vektor}} \&v)
+\begin{DoxyCompactList}\small\item\em Értékadó operáor \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_vektor_a5b50f9d61c5ce73ab7cb9bea72801015}{size}} () const
+\begin{DoxyCompactList}\small\item\em Lekérdezi a tároló méretét \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_vektor_af3d61bda69be591d3d8a3b7a7e6d562c}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+\item 
+\mbox{\Hypertarget{class_vektor_ac6d3503641415c1d0be08b5db348a2d4}\label{class_vektor_ac6d3503641415c1d0be08b5db348a2d4}} 
+T const  \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t index) const
+\item 
+\mbox{\Hypertarget{class_vektor_a82c48a7694cbda87158a63c093470ae0}\label{class_vektor_a82c48a7694cbda87158a63c093470ae0}} 
+void {\bfseries Add} (T const \&new\+\_\+val)
+\item 
+\mbox{\Hypertarget{class_vektor_a96a85992337780e3051ba4d1a057406e}\label{class_vektor_a96a85992337780e3051ba4d1a057406e}} 
+void {\bfseries Delete} (size\+\_\+t index)
+\item 
+\mbox{\Hypertarget{class_vektor_a275b81cacaf5774a0b9ce0935f5ce04c}\label{class_vektor_a275b81cacaf5774a0b9ce0935f5ce04c}} 
+T {\bfseries Pop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Vektor$<$ T $>$}
+
+Egy template osztály megadható tipusú elemek tárolására, vektorban, listafunkciókkal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vektor_ab96639d4c753c3a8282fa686cc060759}\label{class_vektor_ab96639d4c753c3a8282fa686cc060759}} 
+\index{Vektor$<$ T $>$@{Vektor$<$ T $>$}!Vektor@{Vektor}}
+\index{Vektor@{Vektor}!Vektor$<$ T $>$@{Vektor$<$ T $>$}}
+\subsubsection{\texorpdfstring{Vektor()}{Vektor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$\+::\mbox{\hyperlink{class_vektor}{Vektor}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{meret = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Létrehoz egy tárolót a megadott mérettel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 0} & size\+\_\+t meret= \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+explicit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a596e5a76d30f84aee074fa2684f9b450}\label{class_vektor_a596e5a76d30f84aee074fa2684f9b450}} 
+\index{Vektor$<$ T $>$@{Vektor$<$ T $>$}!Vektor@{Vektor}}
+\index{Vektor@{Vektor}!Vektor$<$ T $>$@{Vektor$<$ T $>$}}
+\subsubsection{\texorpdfstring{Vektor()}{Vektor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$\+::\mbox{\hyperlink{class_vektor}{Vektor}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Másolókonstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & const \mbox{\hyperlink{class_vektor}{Vektor}}\& \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vektor_a55c33104d58a98db8af2bc0c48020383}\label{class_vektor_a55c33104d58a98db8af2bc0c48020383}} 
+\index{Vektor$<$ T $>$@{Vektor$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Vektor$<$ T $>$@{Vektor$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$ \& \mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Értékadó operáor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & const \mbox{\hyperlink{class_vektor}{Vektor}}\& \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vektor}{Vektor}}\& operator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_af3d61bda69be591d3d8a3b7a7e6d562c}\label{class_vektor_af3d61bda69be591d3d8a3b7a7e6d562c}} 
+\index{Vektor$<$ T $>$@{Vektor$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vektor$<$ T $>$@{Vektor$<$ T $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & size\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a5b50f9d61c5ce73ab7cb9bea72801015}\label{class_vektor_a5b50f9d61c5ce73ab7cb9bea72801015}} 
+\index{Vektor$<$ T $>$@{Vektor$<$ T $>$}!size@{size}}
+\index{size@{size}!Vektor$<$ T $>$@{Vektor$<$ T $>$}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_vektor}{Vektor}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Lekérdezi a tároló méretét 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arveres.\+h\end{DoxyCompactItemize}

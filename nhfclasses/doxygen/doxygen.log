@@ -1,0 +1,31 @@
+warning: The selected output language "hungarian" has not been updated
+since release 1.8.15.  As a result some sentences may appear in English.
+
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:368: warning: argument 'Vektor' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Item > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:368: warning: argument 'Item' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Item > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:376: warning: argument 'Vektor' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Customer > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:376: warning: argument 'Customer' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Customer > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:368: warning: argument 'Vektor' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Item > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:368: warning: argument 'Item' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Item > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:376: warning: argument 'Vektor' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Customer > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:376: warning: argument 'Customer' of command @param is not found in the argument list of operator<<(ostream &os, Vektor< Customer > items)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:285: warning: unexpected token in comment block while parsing the argument of command param
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:244: warning: argument 'Customer' of command @param is not found in the argument list of Auction::AddCustomer(const Customer &c)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:154: warning: argument 'Generic_Name' of command @param is not found in the argument list of Customer::Customer(string name="Generic_Name", double balance=1000)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:154: warning: argument '1000' of command @param is not found in the argument list of Customer::Customer(string name="Generic_Name", double balance=1000)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:160: warning: The following parameters of Customer::Customer(string name="Generic_Name", double balance=1000) are not documented:
+  parameter 'name'
+  parameter 'balance'
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:28: warning: argument 'Generic_item' of command @param is not found in the argument list of Item::Item(string name="Generic_item", double price=10, string description="Generic_description", SellingMetod sellingMethod=English)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:28: warning: argument '10' of command @param is not found in the argument list of Item::Item(string name="Generic_item", double price=10, string description="Generic_description", SellingMetod sellingMethod=English)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:28: warning: argument 'Generic_description' of command @param is not found in the argument list of Item::Item(string name="Generic_item", double price=10, string description="Generic_description", SellingMetod sellingMethod=English)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:28: warning: argument 'English' of command @param is not found in the argument list of Item::Item(string name="Generic_item", double price=10, string description="Generic_description", SellingMetod sellingMethod=English)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:36: warning: The following parameters of Item::Item(string name="Generic_item", double price=10, string description="Generic_description", SellingMetod sellingMethod=English) are not documented:
+  parameter 'name'
+  parameter 'price'
+  parameter 'description'
+  parameter 'sellingMethod'
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:64: warning: unexpected token in comment block while parsing the argument of command param
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:78: warning: argument '0' of command @param is not found in the argument list of Vektor< T >::Vektor(size_t meret=0)
+C:/Users/404/Documents/GitHub/NHF/nhfclasses/arveres.h:84: warning: The following parameters of Vektor::Vektor(size_t meret=0) are not documented:
+  parameter 'meret'

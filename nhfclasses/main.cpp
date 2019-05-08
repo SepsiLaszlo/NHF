@@ -43,7 +43,7 @@ Item getItemFromConsole() {
 	cin >> price;
 	cout << "Method num: ";
 	cin >> methodnum;
-	
+
 	Item item(name, price, description, SellingMetod(methodnum));
 	TEST(Aukcio, TargyFelvetelEllenorzes)
 		EXPECT_EQ(item.getName(), name) << "A függvény hibás eredményt adott" << std::endl;
@@ -52,7 +52,7 @@ Item getItemFromConsole() {
 		EXPECT_EQ(item.getSellingMethod(),SellingMetod(methodnum)) << "A függvény hibás eredményt adott" << std::endl;
 
 	END
-	
+
 	return item;
 }
 
@@ -60,7 +60,7 @@ Customer getCustomerFromConsole() {
 	cout << "Customer:" << endl;
 	string name;
 	double balance;
-	
+
 	cin.ignore();
 	cout << "Name: ";
 	getline(cin, name);
@@ -104,12 +104,12 @@ void UserInteractionHandler() {
 	while ((cin>>selectedOptionNum),selectedOptionNum!='7')
 	{
 
-	
+
 		switch (selectedOptionNum)
 		{
 		case '1':
 		 auction.AddItemForSale(getItemFromConsole());
-		
+
 			break;
 		case '2':
 			auction.AddCustomer(getCustomerFromConsole());
@@ -128,14 +128,14 @@ void UserInteractionHandler() {
 			auction = Auction();
 			break;
 		case '6':
-			
+
 			SeedAuction();
 			break;
 
 		default:
 			break;
 		}
-		
+
 		PrintOptions();
 	}
 
@@ -155,12 +155,12 @@ void Test() {
 }
 int main() {
 
-	
+
 
 
 	Test();
 
 
-	
+
 	return 0;
 }

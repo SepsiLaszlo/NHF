@@ -61,3 +61,58 @@
 1556890888 source:c:\users\home\desktop\nhf\nhfclasses\auctioneer.cpp
 	"arveres.h"
 
+1557234966 source:c:\users\404\documents\github\nhf\nhfclasses\arveres.cpp
+	"arveres.h"
+
+1557324065 c:\users\404\documents\github\nhf\nhfclasses\arveres.h
+	"arveres.h"
+	<iostream>
+	<string>
+	"memtrace.h"
+
+1557234967 c:\users\404\documents\github\nhf\nhfclasses\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1557234966 source:c:\users\404\documents\github\nhf\nhfclasses\auction.cpp
+	"arveres.h"
+
+1557234966 source:c:\users\404\documents\github\nhf\nhfclasses\auctioneer.cpp
+	"arveres.h"
+
+1557234967 source:c:\users\404\documents\github\nhf\nhfclasses\customer.cpp
+	"arveres.h"
+	<stdlib.h>
+	<time.h>
+
+1557234967 source:c:\users\404\documents\github\nhf\nhfclasses\item.cpp
+	"arveres.h"
+
+1557315145 source:c:\users\404\documents\github\nhf\nhfclasses\main.cpp
+	<iostream>
+	"arveres.h"
+	<stdlib.h>
+	<time.h>
+	<string>
+	"gtest_lite.h"
+	"memtrace.h"
+
+1557234967 c:\users\404\documents\github\nhf\nhfclasses\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
